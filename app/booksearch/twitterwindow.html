@@ -1,0 +1,18 @@
+<script async src="//platform.twitter.com/widgets.js" charset= "utf-8"> </script>
+<md-dialog>
+    <md-toolbar>
+        <div class="md-toolbar-tools">
+			<h2>View the tweet!</h2>
+        </div>
+    </md-toolbar>
+
+    <span ng-bind="showTweet()"></span>
+
+   <div id="theTweet">
+   </div>
+   
+   <md-button type="button" ng-click="cancel()" style="margin-right:20px;">
+                Cancel
+   </md-button>
+</md-dialog>
+

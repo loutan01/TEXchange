@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Sign In</title>
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  
+    </head>
+</html>
+
+<body>
+
+        <section>
+            <div class="panel panel-info">
+                <div class="panel-heading">
+              <h3 class="panel-title" id = 'twitterHandle'></h3>
+              
+              
+            </div>
+            <div class = "potato">
+                <button class = "btn profilebutton" ng-model = 'editProfile' ng-hide = "editorEnabled" ng-click= contactAdministrators()>Edit Profile</button>
+                <button ng-model = 'submitEdit' ng-show = "editorEnabled" ng-click= submitEdit()>Save Changes</button>
+                <button ng-model = 'cancelEdit' ng-show = "editorEnabled" ng-click= cancelEdit()>Cancel</button>
+            
+            </div>
+             
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-3 col-lg-3 " align="center"> <img alt="User Pic" id="UserPic" class="img-circle img-responsive"> </div>
+            
+                <div class=" col-md-9 col-lg-9 " ng-hide="editorEnabled"> 
+                  <table class="table table-user-information">
+                    <tbody id = 'userCredentials'>
+                        <tr>
+                            <td>First Name:</td>
+                            <td id = 'first_name'></td>
+                        </tr>
+                        <tr>
+                            <td>Last Name:</td>
+                            <td id='last_name'></td>
+                        </tr>
+                        <tr>
+                            <td>Email:</td>
+                            <td id='email'></td>
+                        </tr>
+                         <tr>
+                            <td>Province:</td>
+                            <td id='state'</td>
+                        </tr>
+                        <tr>
+                            <td>School:</td>
+                            <td id='name'</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+                <div class="col-md-9 col-lg-9" ng-show="editorEnabled"> 
+                    <table class="table table-user-information">
+                        <tbody id = 'userCredentials'>
+                            <tr>
+                                <td>First Name:</td>
+                                <td><input ng-model="editableFirstName" ng-show="editorEnabled"></td>
+                            </tr>
+                            <tr>
+                                <td>Last Name:</td>
+                                <td><input ng-model="editableLastName"></td>
+                            </tr>
+                            <tr>
+                                <td>Email:</td>
+                                <td><input type = "email" ng-model="editableEmail"></td>
+                            </tr>
+                             <tr>
+                                <td>Province:</td>
+                                <td> <select  ng-model="EditableState" ng-options="x for x in EditableStates" ng-change = "getColleges()"></select></td>
+                            </tr>
+                            <tr>
+                                <td>School:</td>
+                                <td>  <select ng-model="EditableCollege" ng-options="x.name for x in EditableColleges"></select></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+        </section>
+        
+
+  
+    
+    

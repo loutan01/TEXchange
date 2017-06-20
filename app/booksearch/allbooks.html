@@ -1,0 +1,41 @@
+<script src="booksearch.js"></script>
+<h2> All Books </h2>
+<div id = "selectors">
+<select id="sort2" name="sort" >
+				<option disabled selected>
+					Sort by
+				</option>
+				<option>Title</option>
+				<option>Price</option>
+				<option>User</option>
+</select> 
+<label for="reverse-sort2" style="margin-bottom: 0px;">Reverse sort</label> <input id="reverse-sort2" type="checkbox">
+</div>
+<div class="list-group col-md-6" id="forsale">
+<div class="list-group-item"> <h3 class="text-center"> For Sale </h3> </div>
+</div>
+
+<div class="list-group col-md-6" id="lookingfor">
+<div class="list-group-item"> <h3 class="text-center"> Looking For </h3> </div>
+</div>
+
+<div id="tweet">
+</div>
+
+<script>window.twttr = (function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0],
+    t = window.twttr || {};
+  if (d.getElementById(id)) return t;
+  js = d.createElement(s);
+  js.id = id;
+  js.src = "https://platform.twitter.com/widgets.js";
+  fjs.parentNode.insertBefore(js, fjs);
+
+  t._e = [];
+  t.ready = function(f) {
+    t._e.push(f);
+  };
+
+  return t;
+}(document, "script", "twitter-wjs"));</script>
+

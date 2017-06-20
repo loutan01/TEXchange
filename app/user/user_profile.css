@@ -1,0 +1,36 @@
+.panel-info {
+    border-color: #f44336;
+}
+
+.panel-info>.panel-heading {
+    color: #ffffff;
+    background-color: #f44336;
+    border-color: #f44336;
+}
+.editProfile{
+    background-color: white;
+    boarder: black;
+    color: #ff0000;
+
+}
+.potato{
+        float: right;
+}
+
+.profilebutton, .profilebutton:focus {
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    background-color: #cccccc;
+    border: gray;
+    color: black;
+}
+
+.profilebutton:hover, .profilebutton:active, .profilebutton:visited {
+    background-color: #666666;
+    border: #666666;
+    color: white;
+}
+
+
